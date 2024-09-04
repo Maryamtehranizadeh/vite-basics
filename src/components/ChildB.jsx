@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
-function ChildB() {
+function ChildB({ number, setNumber, text }) {
   return (
-    <div>ChildB</div>
-  )
+    <div style={{ border: "2px solid", padding: "20px", margin: "20px" }}>
+      <h1>ChildB</h1>
+      <p>{number}</p>
+      <button onClick={() => setNumber((number) => number * 2)}>*</button>
+      <span>{text}</span>
+    </div>
+  );
 }
 
-export default ChildB
+export default ChildB;

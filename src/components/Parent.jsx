@@ -3,6 +3,8 @@ import ChildA from "./ChildA";
 import MyButton from "./MyButton";
 import { useState } from "react";
 import StyledDiv from "./StyledDiv";
+import WelcomeMessage from "./WelcomeMessage";
+import WelcomePage from "./WelcomePage";
 
 function Parent() {
   const [number, setNumber] = useState(0);
@@ -12,10 +14,11 @@ function Parent() {
 
   return (
     <StyledDiv>
+      <WelcomePage userName= "Akbar"/>
+      <WelcomeMessage userName="Asghar" />
       <h1>Parent</h1>
       <h2>Lifting state up!</h2>
-      <button onClick={() => setNumber((number) => number + 1)}>+ </button>
-
+      <button onClick={() => setNumber((number) => number + 1)}>+</button>
       <ChildA number={number} setNumber={setNumber} />
       <ChildB
         number={number}

@@ -2,6 +2,7 @@ import ChildB from "./ChildB";
 import ChildA from "./ChildA";
 import MyButton from "./MyButton";
 import { useState } from "react";
+import StyledDiv from "./StyledDiv";
 
 function Parent() {
   const [number, setNumber] = useState(0);
@@ -10,7 +11,7 @@ function Parent() {
   };
 
   return (
-    <div style={{ border: "2px solid", padding: "20px", margin: "20px" }}>
+    <StyledDiv>
       <h1>Parent</h1>
       <h2>Lifting state up!</h2>
       <button onClick={() => setNumber((number) => number + 1)}>+ </button>
@@ -24,7 +25,7 @@ function Parent() {
         button={<MyButton clickHandler={clickHandler} />}
       />
       <MyButton clickHandler={clickHandler} />
-    </div>
+    </StyledDiv>
   );
 }
 

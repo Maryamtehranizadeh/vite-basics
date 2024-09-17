@@ -1,11 +1,11 @@
 import React from "react";
 import WelcomeMessage from "./WelcomeMessage";
 
-function WelcomePage({ userName }) {
+function WelcomePage({ children }) {
   return (
     <div>
-      <h2>Hey you {userName}!</h2>
-      <WelcomeMessage userName="Ghanbar" />
+      <h4>This is a component composition</h4>
+      {children}
     </div>
   );
 }

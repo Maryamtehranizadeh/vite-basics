@@ -14,8 +14,9 @@ function Parent() {
 
   return (
     <StyledDiv>
-      <WelcomePage userName= "Akbar"/>
-      <WelcomeMessage userName="Asghar" />
+      <WelcomePage>
+        <WelcomeMessage userName="Jafar" />
+      </WelcomePage>
       <h1>Parent</h1>
       <h2>Lifting state up!</h2>
       <button onClick={() => setNumber((number) => number + 1)}>+</button>
